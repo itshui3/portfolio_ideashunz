@@ -8,6 +8,8 @@ const IMG_CAROUSEL_ACTIONS = {
     SELECT: 'select'
 }
 
+const { RIGHT, LEFT, SELECT } = IMG_CAROUSEL_ACTIONS
+
 const imgSwitchReducer = (state, { type, payload }) => {
 
     switch(type) {
