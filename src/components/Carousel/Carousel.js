@@ -1,6 +1,8 @@
 import './_carousel.sass'
 import React, { useReducer, useEffect } from 'react'
 
+import CarouselDot from './CarouselDot'
+
 import {
     initImg,
     IMG_CAROUSEL_ACTIONS,
@@ -23,14 +25,30 @@ return (
 <>
     <div className='carousel_cont'>
 
-        {/* 
-        img body 
-            left arrow - right arrow
-            bubble dots to indicate which image selected
-        */}
-        <img src='/img/pandacriminal.PNG' alt={imgAssets[img.idx].alt} />
+        <div className='img_cont'>
+            <img src={imgAssets[img.idx].src} alt={imgAssets[img.idx].alt} />
 
-{/* {imgAssets[img.idx].src} */}
+            <div className='left_cont'></div>
+            <div className='right_cont'></div>
+
+            <div className='dots_cont'>
+                {
+                    imgAssets.map((img, idx) => (
+                        <CarouselDot 
+                        key={idx}
+                        selectDot={() => dispatchImg({ type: SELECT, payload: idx })}
+                        />
+                    ))
+                }
+            </div>
+
+        </div>
+        
+
+
+        <div className='carousel_subtext'>
+        <h2>An array of pandas</h2>
+        </div>
 
     </div>
 

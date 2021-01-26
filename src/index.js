@@ -6,12 +6,14 @@ import reportWebVitals from './reportWebVitals';
 // wrapper compo
 import CenterWrapper from './CenterWrapper';
 // children compos
-import { Carousel, imgAssets } from './components'
+import { SVGNotes, Carousel, imgAssets } from './components'
+
 
 ReactDOM.render(
 <React.StrictMode>
     <CenterWrapper>
-    <Carousel imgAssets={imgAssets}/>
+    {/* <Carousel imgAssets={imgAssets}/> */}
+    <SVGNotes />
     </CenterWrapper>
 </React.StrictMode>,
 document.getElementById('root')
