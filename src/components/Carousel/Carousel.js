@@ -9,13 +9,7 @@ import {
 
 const { RIGHT, LEFT, SELECT } = IMG_CAROUSEL_ACTIONS
 
-const imgAssets = [
-    { src: '/img/pandacriminal.PNG', alt: 'criminalities' },
-    { src: '/img/pandagoggles.PNG', alt: 'steam-pans' },
-    { src: '/img/pandaworkman.PNG', alt: 'pan-salary-man' }
-]
-
-function Carousel() {
+function Carousel({ imgAssets }) {
 
     const [img, dispatchImg] = useReducer(imgSwitchReducer, initImg)
 
