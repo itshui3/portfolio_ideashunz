@@ -1,21 +1,37 @@
 import './_carousel.sass'
-import React, { useState } from 'react'
+import React, { useReducer } from 'react'
 
-function Carousel({ imgs }) {
-    // imgs prop should be some way to point to imgs
+import {
+    initImg,
+    IMG_CAROUSEL_ACTIONS,
+    imgSwitchReducer
+} from './_imageSwitchReducer'
 
-    const [curImgIdx, setCurImgIdx] = useState(0)
-    // imgs[curImgIdx]
+const { RIGHT, LEFT, SELECT } = IMG_CAROUSEL_ACTIONS
+
+const imgAssets = [
+    { src: './img/pandacriminal.PNG', alt: 'criminalities' },
+    { src: './img/pandagoggles.PNG', alt: 'steam-pans' },
+    { src: './img/pandaworkman.PNG', alt: 'pan-salary-man' }
+]
+
+function Carousel() {
+
+    const [img, dispatchImg] = useReducer(imgSwitchReducer, initImg)
+
+    // I need handlers taht can go left/right
 
 return (
 <>
     <div className='carousel_cont'>
-        hi, im a carousel
+
         {/* 
         img body 
             left arrow - right arrow
             bubble dots to indicate which image selected
         */}
+        <img src={imgAssets[img.idx].src} alt={imgAssets[img.idx].alt} />
+
 
     </div>
 

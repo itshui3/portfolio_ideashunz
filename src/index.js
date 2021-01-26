@@ -11,7 +11,7 @@ import Carousel from './components/Carousel/Carousel'
 ReactDOM.render(
 <React.StrictMode>
     <CenterWrapper>
-    <Carousel imgs={['insert img objs here']}/>
+    <Carousel />
     </CenterWrapper>
 </React.StrictMode>,
 document.getElementById('root')
