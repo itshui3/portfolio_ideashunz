@@ -1,14 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import CenterWrapper from './CenterWrapper';
 import reportWebVitals from './reportWebVitals';
 
+// wrapper compo
+import CenterWrapper from './CenterWrapper';
+// children compos
+import Carousel from './components/Carousel/Carousel'
+
 ReactDOM.render(
-  <React.StrictMode>
-    <CenterWrapper />
-  </React.StrictMode>,
-  document.getElementById('root')
+<React.StrictMode>
+    <CenterWrapper>
+    <Carousel imgs={['insert img objs here']}/>
+    </CenterWrapper>
+</React.StrictMode>,
+document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function
