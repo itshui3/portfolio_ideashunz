@@ -34,7 +34,7 @@ return (
             left arrow - right arrow
             bubble dots to indicate which image selected
         */}
-        <img src='../img/pandacriminal.PNG' alt={imgAssets[img.idx].alt} />
+        <img src='/img/pandacriminal.PNG' alt={imgAssets[img.idx].alt} />
 
 {/* {imgAssets[img.idx].src} */}
 
