@@ -10,9 +10,9 @@ const initItems = [
 
 const lidMenuInit = {
     // lidColors
-    lidColor: '#000',           // black
-    itemColor: '#F5F5F5',       // whitesmoke
-    sepColor: '#696969',        // dimgrey
+    lidColor: '#000',
+    itemColor: '#708090',
+    sepColor: '#696969',
 
     // items
     lidItems: initItems

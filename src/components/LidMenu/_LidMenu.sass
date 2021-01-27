@@ -4,6 +4,7 @@
     padding-top: 2px
 
     .lidMenu_item
+        z-index: 1
         height: 30px
 
         display: flex
@@ -12,6 +13,14 @@
 
         cursor: pointer
 
-        .lidMenu_item:after
+        // opacity: 
+        // &:hover
+        //     opacity: .1
+
+        &:after
+            position: absolute
+            padding-bottom: 31px
+            content: ""
             border-top: 1px solid black
-            width: 50%
+            width: 80%
+            // padding-top: 20px
