@@ -19,8 +19,8 @@ import {
 ReactDOM.render(
 <React.StrictMode>
     <CenterWrapper>
-    <Carousel imgAssets={imgAssets}/>
-    {/* <SVGNotes /> */}
+    {/* <Carousel imgAssets={imgAssets}/> */}
+    <SVGNotes />
     {/* <BWButton /> */}
 
     </CenterWrapper>

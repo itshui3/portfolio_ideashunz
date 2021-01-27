@@ -1,15 +1,16 @@
+import './_SVGArrow.sass'
 import React from 'react'
 
 // svgs
 import CircleSVG from './CircleSVG/CircleSVG'
+import ArrowSVG from './ArrowSVG/ArrowSVG'
 
 function SVGNotes() {
 return (
 <>
+    {/* <ArrowSVG /> */}
     <CircleSVG />
-    <svg><use href='#circle'></use></svg>
-    <svg><use href='#circle'></use></svg>
-    <svg><use href='#circle'></use></svg>
+
 </>
 )
 }

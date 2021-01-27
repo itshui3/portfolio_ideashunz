@@ -11,18 +11,11 @@ import {
 
 const { RIGHT, LEFT, SELECT } = IMG_CAROUSEL_ACTIONS
 
-const selectStyle = {
-    transform: 'scale(1.4, 1.4)'
-}
+const dotColor = 'saddlebrown'
 
 function Carousel({ imgAssets }) {
 
     const [img, dispatchImg] = useReducer(imgSwitchReducer, initImg)
-
-    useEffect(() => {
-        console.log('img', img.idx)
-    }, [img])
-
     // I need handlers taht can go left/right
 
 return (
@@ -37,13 +30,16 @@ return (
 
             <div className='dots_cont'>
                 {
-                    imgAssets.map((i, idx) => (
-                        <CarouselDot 
-                        key={idx}
-                        selected={img.idx === idx}
-                        selectDot={() => dispatchImg({ type: SELECT, payload: idx })}
-                        />
-                    ))
+
+                imgAssets.map((i, idx) => (
+                    <CarouselDot 
+                    dotColor={dotColor}
+                    key={idx}
+                    selected={img.idx === idx}
+                    selectDot={() => dispatchImg({ type: SELECT, payload: idx })}
+                    />
+                ))
+
                 }
             </div>
 
