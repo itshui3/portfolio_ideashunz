@@ -5,6 +5,8 @@ import BWButton from './BWButton/BWButton'
 import Carousel from './Carousel/Carousel'
 import { imgAssets } from './Carousel/imgAssets'
 
+import LidMenu from './LidMenu/LidMenu'
+
 export {
     // Practice with SVGs
     SVGNotes,
@@ -12,5 +14,7 @@ export {
     Carousel,
     imgAssets,
     // BWButton
-    BWButton
+    BWButton,
+    // LidMenu
+    LidMenu,
 }

@@ -1,4 +1,5 @@
 import './_SVGArrow.sass'
+import './_SVGcont.sass'
 import React from 'react'
 
 // svgs
@@ -7,10 +8,12 @@ import ArrowSVG from './ArrowSVG/ArrowSVG'
 
 function SVGNotes() {
 return (
-<>
-    {/* <ArrowSVG /> */}
-    <CircleSVG />
-
+<>  
+<div className='SVG_cont'>
+{/* <ArrowSVG /> */}
+<CircleSVG />
+<div className='SVG_selectDots'></div>
+</div>
 </>
 )
 }
