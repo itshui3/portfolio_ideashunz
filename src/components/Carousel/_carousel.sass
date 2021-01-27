@@ -22,12 +22,13 @@
             opacity: .9
 
         .left_cont
+            // opacity: 0
             z-index: 1
             position: absolute
             width: 50px
             height: 50px
 
-            left: 0px
+            left: calc(0% + 5px)
             top: 40%
 
             display: flex
@@ -37,12 +38,13 @@
             background-color: black
 
         .right_cont
+            // opacity: 0
             z-index: 1
             position: absolute
             width: 50px
             height: 50px
 
-            right: 0px
+            right: calc(0% + 5px)
             top: 40%
 
             display: flex
@@ -66,21 +68,28 @@
 
             .dot_cont
                 width: 60px
+                height: 30px
                 display: flex
                 justify-content: center
+                align-items: center
 
                 .dot
                     z-index: 2
-                    width: 20px
-                    height: 20px
+                    width: 14px
+                    height: 14px
 
-                    background-color: white
+                    background-color: black
+                    opacity: .3
 
                     border-radius: 50%
-                    border: 1px solid black
+                    // border: 1px solid black
+                
+                .dot:hover
+                    transform: scale(1.15, 1.15)
+                    opacity: .5
 
-                .dot:active
-                    background-color: black
+                // .dot:active
+                //     background-color: black
 
     .carousel_subtext
         height: 150px
