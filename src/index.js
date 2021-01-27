@@ -1,14 +1,31 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import CenterWrapper from './CenterWrapper';
 import reportWebVitals from './reportWebVitals';
 
+// wrapper compo
+import CenterWrapper from './CenterWrapper';
+// children compos
+import { 
+    SVGNotes, 
+    // carousel and assets
+    Carousel, 
+    imgAssets,
+    // BWButton
+    BWButton
+ } from './components'
+
+
 ReactDOM.render(
-  <React.StrictMode>
-    <CenterWrapper />
-  </React.StrictMode>,
-  document.getElementById('root')
+<React.StrictMode>
+    <CenterWrapper>
+    <Carousel imgAssets={imgAssets}/>
+    {/* <SVGNotes /> */}
+    {/* <BWButton /> */}
+
+    </CenterWrapper>
+</React.StrictMode>,
+document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function

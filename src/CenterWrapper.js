@@ -1,10 +1,27 @@
 import React from 'react'
 
-function CenterWrapper() {
+const center = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)'
+}
+
+const wrapper = {
+    width: '100%',
+    height: '100vh',
+    position: 'relative'
+}
+
+function CenterWrapper(props) {
+
 return (
 <>
-
-<div className='center_wrapper'>hello world</div>
+<div style={wrapper}>
+    <div style={center}>
+        {props.children}
+    </div>
+</div>
 
 </>
 )
