@@ -7,7 +7,8 @@ import { imgAssets } from './Carousel/imgAssets'
 
 import LidMenu from './LidMenu/LidMenu'
 
-import LazyLoad from './Typewriters/LazyLoad/LazyLoad'
+import LazyLoad from './Typewriters'
+import TypewriterWithin from './Typewriters'
 
 
 
@@ -21,6 +22,7 @@ export {
     BWButton,
     // LidMenu
     LidMenu,
-    // LazyLoad
+    // Typewriters
     LazyLoad,
+    TypewriterWithin
 }
