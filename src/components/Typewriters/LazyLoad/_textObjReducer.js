@@ -1,6 +1,7 @@
 
 import produce from 'immer'
 const initTextObj = {
+    textObj: null,
     inputText: '',
     submitText: ''
 }
@@ -8,6 +9,7 @@ const initTextObj = {
 const A = {
 // typetext actions
     TYPETEXT: {
+        RECEIVE: 'receive',
         INPUT: 'input',
         SUBMIT: 'submit'
     }
@@ -15,11 +17,16 @@ const A = {
 }
 
 const { TYPETEXT } = A
-const { INPUT, SUBMIT } = TYPETEXT
+const { INPUT, SUBMIT, RECEIVE } = TYPETEXT
 
 const textObjReducer = (state, { type, payload }) => {
 
     switch(type) {
+
+        case RECEIVE:
+            return produce(state, draft => {
+                draft.textObj = payload
+            })
 
         case INPUT:
             return produce(state, draft => {
@@ -39,6 +46,7 @@ const textObjReducer = (state, { type, payload }) => {
 
 export {
     initTextObj,
+    RECEIVE,
     INPUT,
     SUBMIT,
     textObjReducer
