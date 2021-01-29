@@ -7,7 +7,7 @@ import { imgAssets } from './Carousel/imgAssets'
 
 import LidMenu from './LidMenu/LidMenu'
 
-import LazyLoad from './LazyLoad/LazyLoad'
+import LazyLoad from './Typewriters/LazyLoad/LazyLoad'
 
 
 

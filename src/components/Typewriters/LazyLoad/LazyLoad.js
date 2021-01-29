@@ -1,12 +1,13 @@
 
 import './_LazyLoad.css'
-import React, { useEffect, useReducer, useRef } from 'react'
+import React, { useEffect, useReducer } from 'react'
 
 import Typewriter from 'typewriter-effect'
 // Typewriter div wrapper compo containing our methods
 
 import {
     initTextObj,
+    RECEIVE,
     INPUT,
     SUBMIT,
     textObjReducer
@@ -15,11 +16,10 @@ import {
 function LazyLoad() {
 
     const [textObj, textObjDispatch] = useReducer(textObjReducer, initTextObj)
-    const typewriterRef = useRef()
 
     useEffect(() => {
-        if (typewriterRef.current) {
-            typewriterRef.current.typeString(textObj.submit).start()
+        if (textObj.textObj) {
+            textObj.textObj.typeString(textObj.submit).start()
         }
         
     }, [textObj.submit])
@@ -29,7 +29,7 @@ return (
 <div className='typewriter_cont'>
 
     <Typewriter onInit={(typewriter) => {
-        typewriterRef.current = typewriter
+        textObjDispatch({ type: RECEIVE, payload: typewriter })
     }}
     />
 
