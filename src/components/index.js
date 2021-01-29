@@ -7,6 +7,10 @@ import { imgAssets } from './Carousel/imgAssets'
 
 import LidMenu from './LidMenu/LidMenu'
 
+import LazyLoad from './LazyLoad/LazyLoad'
+
+
+
 export {
     // Practice with SVGs
     SVGNotes,
@@ -17,4 +21,6 @@ export {
     BWButton,
     // LidMenu
     LidMenu,
+    // LazyLoad
+    LazyLoad,
 }

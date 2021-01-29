@@ -15,6 +15,8 @@ import {
     BWButton,
     // Lid-Menu
     LidMenu,
+    // LazyLoad
+    LazyLoad,
  } from './components'
 
 
@@ -24,7 +26,10 @@ ReactDOM.render(
     {/* <Carousel imgAssets={imgAssets}/> */}
     {/* <SVGNotes /> */}
     {/* <BWButton /> */}
-    <LidMenu />
+    {/* <LidMenu /> */}
+
+    <LazyLoad />
+
     </CenterWrapper>
 </React.StrictMode>,
 document.getElementById('root')
