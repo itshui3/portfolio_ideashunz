@@ -12,16 +12,23 @@ import {
     Carousel, 
     imgAssets,
     // BWButton
-    BWButton
+    BWButton,
+    // Lid-Menu
+    LidMenu,
+    // LazyLoad
+    LazyLoad,
  } from './components'
 
 
 ReactDOM.render(
 <React.StrictMode>
     <CenterWrapper>
-    <Carousel imgAssets={imgAssets}/>
+    {/* <Carousel imgAssets={imgAssets}/> */}
     {/* <SVGNotes /> */}
     {/* <BWButton /> */}
+    {/* <LidMenu /> */}
+
+    <LazyLoad />
 
     </CenterWrapper>
 </React.StrictMode>,
