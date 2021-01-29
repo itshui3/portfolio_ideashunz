@@ -6,10 +6,10 @@ import reportWebVitals from './reportWebVitals';
 // wrapper compo
 import CenterWrapper from './CenterWrapper';
 // children compos
-import { 
-    SVGNotes, 
+import {
+    SVGNotes,
     // carousel and assets
-    Carousel, 
+    Carousel,
     imgAssets,
     // BWButton
     BWButton,

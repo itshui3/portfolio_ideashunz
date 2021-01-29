@@ -1,16 +1,48 @@
 .typewriter_cont {
     /* position: relative; */
     /* width: 50%; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    height: 200px;
 }
 
 .typewriter_cont .Typewriter {
     white-space: pre;
     font-size: 20px;
     cursor: none;
-
-    border: 1px solid black;
+    /* width: 100vw; */
+    /* border: 1px solid black; */
     /* word-wrap: normal; */
 
-    position: absolute;
 
+}
+
+.typewriter_cont .typewriter_input {
+    width: 200px;
+    height: 30px;
+
+    box-sizing: border-box;
+}
+
+.typewriter_cont .typewriter_submit {
+    width: 200px;
+    height: 50px;
+
+    border: 1px solid black;
+    background: black;
+    color: white;
+
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.typewriter_cont .typewriter_submit:active {
+    background: white;
+    color: black;
 }
