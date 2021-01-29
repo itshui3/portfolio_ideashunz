@@ -1,0 +1,16 @@
+.typewriter_cont {
+    /* position: relative; */
+    /* width: 50%; */
+}
+
+.typewriter_cont .Typewriter {
+    white-space: pre;
+    font-size: 20px;
+    cursor: none;
+
+    border: 1px solid black;
+    /* word-wrap: normal; */
+
+    position: absolute;
+
+}
