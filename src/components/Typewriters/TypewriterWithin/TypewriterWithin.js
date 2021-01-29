@@ -75,4 +75,5 @@ of tehse two methods?
 
 - why does alert block proceeding events? does it have a similar
 effect on things outside of Typewriter paradigm as well? 
+- Even async setTimeout alert does this
 */
