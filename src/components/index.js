@@ -7,8 +7,10 @@ import { imgAssets } from './Carousel/imgAssets'
 
 import LidMenu from './LidMenu/LidMenu'
 
-import LazyLoad from './Typewriters'
-import TypewriterWithin from './Typewriters'
+import {
+    LazyLoad, 
+    TypewriterWithin
+} from './Typewriters'
 
 
 
