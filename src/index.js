@@ -17,6 +17,7 @@ import {
     LidMenu,
     // LazyLoad
     LazyLoad,
+    TypewriterWithin,
  } from './components'
 
 
@@ -28,7 +29,7 @@ ReactDOM.render(
     {/* <BWButton /> */}
     {/* <LidMenu /> */}
 
-    <LazyLoad />
+    <TypewriterWithin />
 
     </CenterWrapper>
 </React.StrictMode>,

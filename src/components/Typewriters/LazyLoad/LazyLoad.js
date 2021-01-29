@@ -60,6 +60,7 @@ export default LazyLoad
 // [1] - I want to familiarize with Typewriter methodology
 // [a] - typewriter-effect's <Typewriter />
 // methods:
+// - .typeString('insert string for Typewriter to type')
 // - .start()
 
 // [2] - I want to come up with a set of interesting useCases 
