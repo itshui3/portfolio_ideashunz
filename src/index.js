@@ -18,6 +18,8 @@ import {
     // LazyLoad
     LazyLoad,
     TypewriterWithin,
+    // StorySquad Carousel
+    SSCarousel,
  } from './components'
 
 
@@ -28,8 +30,9 @@ ReactDOM.render(
     {/* <SVGNotes /> */}
     {/* <BWButton /> */}
     {/* <LidMenu /> */}
+    {/* <TypewriterWithin /> */}
 
-    <TypewriterWithin />
+    <SSCarousel />
 
     </CenterWrapper>
 </React.StrictMode>,
