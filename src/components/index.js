@@ -1,3 +1,4 @@
+
 import SVGNotes from './SVGPractice/SVGNotes'
 
 import BWButton from './BWButton/BWButton'
@@ -6,6 +7,8 @@ import Carousel from './Carousel/Carousel'
 import { imgAssets } from './Carousel/imgAssets'
 
 import LidMenu from './LidMenu/LidMenu'
+
+import SSCarousel from './SSCarousel/SSCarousel'
 
 import {
     LazyLoad, 
@@ -26,5 +29,7 @@ export {
     LidMenu,
     // Typewriters
     LazyLoad,
-    TypewriterWithin
+    TypewriterWithin,
+    // SSCarousel
+    SSCarousel,
 }
