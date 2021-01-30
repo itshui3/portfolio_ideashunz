@@ -30,8 +30,9 @@ ReactDOM.render(
     {/* <SVGNotes /> */}
     {/* <BWButton /> */}
     {/* <LidMenu /> */}
-
     {/* <TypewriterWithin /> */}
+
+    <SSCarousel />
 
     </CenterWrapper>
 </React.StrictMode>,
