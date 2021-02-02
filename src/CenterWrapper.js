@@ -1,4 +1,6 @@
 import React from 'react'
+require('dotenv').config();
+console.log('public_url', process.env.PUBLIC_URL);
 
 const center = {
     position: 'absolute',

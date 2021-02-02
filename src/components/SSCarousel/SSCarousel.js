@@ -1,45 +1,92 @@
 
 import './_SSCarousel.css'
-import React from 'react'
+import React, { useState } from 'react'
 
 import ArrowSVG from './ArrowSVG'
+import { imgAssets } from './imgAssets.js'
 
 const leftSVGStyle = 'rotate_left_svg'
 
+
 function SSCarousel() {
+
+    const [curPanda, setCurPanda] = useState(0)
+
+    const handleSelectImg = (idx) => {
+        setCurPanda(idx)
+    }
+
+    const handleDirectImg = (dir) => {
+        console.log('do thing?', dir)
+        if (dir > 0) {
+
+            setCurPanda(idx => {
+                if (idx === 2) {
+                    return 0
+                } else {
+                    return idx + 1
+                }
+            })
+
+        } else {
+
+            setCurPanda(idx => {
+                if (idx === 0) {
+                    return 2
+                } else {
+                    return idx - 1
+                }
+            })
+
+        }
+    }
+
 return (
 <>
 
 <div className='sscarousel_main_wrapper'>
     <div className='sscarousel_main_cont'>
-        <div className='sscarousel_side_cont'>
-            <ArrowSVG side={leftSVGStyle} />
+        <div className='sscarousel_side_cont'
+        onClick={() => handleDirectImg(-1)} >
+            <ArrowSVG 
+            side={leftSVGStyle} isEnd={false}
+            />
         </div>
 
         <div className='sscarousel_body_wrapper'>
-            <div className='sscarousel_body_cont'></div>
+            <div className='sscarousel_body_cont' 
+            style={{
+                background: `url(${imgAssets[curPanda].src})`,
+                backgroundSize: 'contain'
+            }}>
+        </div>
 
         </div>
         
-        <div className='sscarousel_side_cont'>
-            <ArrowSVG />
+        <div className='sscarousel_side_cont'
+        onClick={() => handleDirectImg(1)} >
+            <ArrowSVG isEnd={ curPanda === imgAssets.length-1 ? true : false } />
         </div>
 
     </div>
     <div className='sscarousel_bottom_cont'>
+        {
+            imgAssets.map((img, idx) => (
+            <div className='sscarouse_bottom_btnConts' key={idx}>
+                <div className='sscarousel_bottom_btns'
+                onClick={() => handleSelectImg(idx)}
+                style={
+                    curPanda === idx
+                    ?
+                    {transform: 'scale(1.5)'}
+                    :
+                    null
+                }
+                ></div>
+            </div>
+            ))
+        }
 
-        <div className='sscarouse_bottom_btnConts'>
-            <div className='sscarousel_bottom_btns'></div>
-        </div>
-        <div className='sscarouse_bottom_btnConts'>
-            <div className='sscarousel_bottom_btns'></div>
-        </div>
-        <div className='sscarouse_bottom_btnConts'>
-            <div className='sscarousel_bottom_btns'></div>
-        </div>
-        <div className='sscarouse_bottom_btnConts'>
-            <div className='sscarousel_bottom_btns'></div>
-        </div>
 
     </div>
 </div>

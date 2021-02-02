@@ -20,7 +20,6 @@
 }
 
 .sscarousel_side_cont {
-    border: 1px solid black;
     height: 100%;
     width: 32px;
 
@@ -35,8 +34,12 @@
     width: calc(100% - 64px);
 }
 
+.sscarousel_body_cont {
+    width: 100%;
+    height: 100%;
+}
+
 .sscarousel_side_svg {
-    border: 1px solid black;
 
     height: 32px;
     width: 32px;
@@ -44,14 +47,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    cursor: pointer;
 }
 
 .rotate_left_svg {
     transform: rotate(180deg)
-}
-
-.sscarousel_wrapper {
-
 }
 
 .sscarousel_bottom_cont {
