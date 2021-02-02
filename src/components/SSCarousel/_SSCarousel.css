@@ -20,7 +20,6 @@
 }
 
 .sscarousel_side_cont {
-    border: 1px solid black;
     height: 100%;
     width: 32px;
 
@@ -41,7 +40,6 @@
 }
 
 .sscarousel_side_svg {
-    border: 1px solid black;
 
     height: 32px;
     width: 32px;
@@ -49,6 +47,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    cursor: pointer;
 }
 
 .rotate_left_svg {
