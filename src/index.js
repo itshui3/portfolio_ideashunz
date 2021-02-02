@@ -1,8 +1,8 @@
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-
 // wrapper compo
 import CenterWrapper from './CenterWrapper';
 // children compos
@@ -21,7 +21,6 @@ import {
     // StorySquad Carousel
     SSCarousel,
  } from './components'
-
 
 ReactDOM.render(
 <React.StrictMode>

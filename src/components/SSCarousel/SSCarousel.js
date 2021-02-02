@@ -1,12 +1,17 @@
 
 import './_SSCarousel.css'
-import React from 'react'
+import React, { useState } from 'react'
 
 import ArrowSVG from './ArrowSVG'
+import { imgAssets } from './imgAssets.js'
 
 const leftSVGStyle = 'rotate_left_svg'
 
+
 function SSCarousel() {
+
+    const [curPanda, setCurPanda] = useState(imgAssets[0])
+
 return (
 <>
 
@@ -17,7 +22,11 @@ return (
         </div>
 
         <div className='sscarousel_body_wrapper'>
-            <div className='sscarousel_body_cont'></div>
+            <div className='sscarousel_body_cont' 
+            style={{
+                backgroundImg: `url(${curPanda.src})` 
+            }}>
+        </div>
 
         </div>
         

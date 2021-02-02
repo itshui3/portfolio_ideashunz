@@ -1,9 +1,7 @@
 import React from 'react'
 
 function ArrowSVG({ side }) {
-    React.useEffect(() => {
-        console.log('side', side)
-    }, [])
+
 return (
 <>
 <svg className={`sscarousel_side_svg ${side}`}>
