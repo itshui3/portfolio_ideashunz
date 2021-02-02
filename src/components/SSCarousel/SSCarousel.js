@@ -10,45 +10,81 @@ const leftSVGStyle = 'rotate_left_svg'
 
 function SSCarousel() {
 
-    const [curPanda, setCurPanda] = useState(imgAssets[0])
+    const [curPanda, setCurPanda] = useState(0)
+
+    const handleSelectImg = (idx) => {
+        setCurPanda(idx)
+    }
+
+    const handleDirectImg = (dir) => {
+        console.log('do thing?', dir)
+        if (dir > 0) {
+
+            setCurPanda(idx => {
+                if (idx === 2) {
+                    return 0
+                } else {
+                    return idx + 1
+                }
+            })
+
+        } else {
+
+            setCurPanda(idx => {
+                if (idx === 0) {
+                    return 2
+                } else {
+                    return idx - 1
+                }
+            })
+
+        }
+    }
 
 return (
 <>
 
 <div className='sscarousel_main_wrapper'>
     <div className='sscarousel_main_cont'>
-        <div className='sscarousel_side_cont'>
+        <div className='sscarousel_side_cont'
+        onClick={() => handleDirectImg(-1)} >
             <ArrowSVG side={leftSVGStyle} />
         </div>
 
         <div className='sscarousel_body_wrapper'>
             <div className='sscarousel_body_cont' 
             style={{
-                backgroundImg: `url(${curPanda.src})` 
+                background: `url(${imgAssets[curPanda].src})`,
+                backgroundSize: 'contain'
             }}>
         </div>
 
         </div>
         
-        <div className='sscarousel_side_cont'>
+        <div className='sscarousel_side_cont'
+        onClick={() => handleDirectImg(1)} >
             <ArrowSVG />
         </div>
 
     </div>
     <div className='sscarousel_bottom_cont'>
+        {
+            imgAssets.map((img, idx) => (
+            <div className='sscarouse_bottom_btnConts' key={idx}>
+                <div className='sscarousel_bottom_btns'
+                onClick={() => handleSelectImg(idx)}
+                style={
+                    curPanda === idx
+                    ?
+                    {transform: 'scale(1.5)'}
+                    :
+                    null
+                }
+                ></div>
+            </div>
+            ))
+        }
 
-        <div className='sscarouse_bottom_btnConts'>
-            <div className='sscarousel_bottom_btns'></div>
-        </div>
-        <div className='sscarouse_bottom_btnConts'>
-            <div className='sscarousel_bottom_btns'></div>
-        </div>
-        <div className='sscarouse_bottom_btnConts'>
-            <div className='sscarousel_bottom_btns'></div>
-        </div>
-        <div className='sscarouse_bottom_btnConts'>
-            <div className='sscarousel_bottom_btns'></div>
-        </div>
 
     </div>
 </div>
