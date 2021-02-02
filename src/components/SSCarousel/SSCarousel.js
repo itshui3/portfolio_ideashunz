@@ -48,7 +48,9 @@ return (
     <div className='sscarousel_main_cont'>
         <div className='sscarousel_side_cont'
         onClick={() => handleDirectImg(-1)} >
-            <ArrowSVG side={leftSVGStyle} />
+            <ArrowSVG 
+            side={leftSVGStyle} isEnd={false}
+            />
         </div>
 
         <div className='sscarousel_body_wrapper'>
@@ -63,7 +65,7 @@ return (
         
         <div className='sscarousel_side_cont'
         onClick={() => handleDirectImg(1)} >
-            <ArrowSVG />
+            <ArrowSVG isEnd={ curPanda === imgAssets.length-1 ? true : false } />
         </div>
 
     </div>
