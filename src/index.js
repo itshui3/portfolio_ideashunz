@@ -34,7 +34,7 @@ ReactDOM.render(
     {/* <TypewriterWithin /> */}
     {/* <SSCarousel /> */}
 
-    {/* <ReactSpring /> */}
+    <ReactSpring />
 
     </CenterWrapper>
 </React.StrictMode>,
