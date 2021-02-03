@@ -20,6 +20,8 @@ import {
     TypewriterWithin,
     // StorySquad Carousel
     SSCarousel,
+    // ReactSpring
+    ReactSpring,
  } from './components'
 
 ReactDOM.render(
@@ -30,8 +32,9 @@ ReactDOM.render(
     {/* <BWButton /> */}
     {/* <LidMenu /> */}
     {/* <TypewriterWithin /> */}
+    {/* <SSCarousel /> */}
 
-    <SSCarousel />
+    {/* <ReactSpring /> */}
 
     </CenterWrapper>
 </React.StrictMode>,

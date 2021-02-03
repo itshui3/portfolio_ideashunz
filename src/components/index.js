@@ -10,6 +10,8 @@ import LidMenu from './LidMenu/LidMenu'
 
 import SSCarousel from './SSCarousel/SSCarousel'
 
+import ReactSpring from './ReactSpring/ReactSpring'
+
 import {
     LazyLoad, 
     TypewriterWithin
@@ -32,4 +34,6 @@ export {
     TypewriterWithin,
     // SSCarousel
     SSCarousel,
+    // ReactSpring
+    ReactSpring,
 }
