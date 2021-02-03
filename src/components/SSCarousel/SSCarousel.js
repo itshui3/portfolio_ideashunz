@@ -78,10 +78,12 @@ return (
                 style={
                     curPanda === idx
                     ?
-                    {transform: 'scale(1.5)'}
+                    {transform: 'scale(1.5)',
+                    backgroundColor: 'rgba(0, 0, 0, 0.9)'}
                     :
                     null
                 }
+
                 ></div>
             </div>
             ))
